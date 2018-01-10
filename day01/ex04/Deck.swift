@@ -28,6 +28,10 @@ class Deck : NSObject
     func draw() -> Card?
     {
         let drawnCard: Card? = self.cards.first;
+        if (drawnCard == nil)
+        {
+            return nil;
+        }
         self.cards.removeFirst();
         if drawnCard != nil
         {

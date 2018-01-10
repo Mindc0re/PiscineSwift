@@ -25,9 +25,5 @@ for heart in Deck.allHearts
 print("\n\u{001B}[0;36mAll Cards :\u{001B}[0;0m");
 for card in Deck.allCards
 {
-    print(card);
-    if (card.value.rawValue == 13)
-    {
-        print("");
-    }
+    print(card, terminator: card.value.rawValue == 13 ? "\n\n" : "\n");
 }
