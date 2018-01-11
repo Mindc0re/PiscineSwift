@@ -101,19 +101,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bBZ-tf-gxw">
-                                <rect key="frame" x="27" y="165" width="321" height="216"/>
+                                <rect key="frame" x="27" y="120" width="321" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Z6A-qn-iyT"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="537314078.32718694">
                                     <!--2018-01-10 21:54:38 +0000-->
                                 </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978310800">
+                                    <!--1969-12-31 23:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="updateMinimumDate:" destination="tsA-cH-MRn" eventType="valueChanged" id="62l-Cx-83O"/>
+                                </connections>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name your victim" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hi8-kN-ARL">
-                                <rect key="frame" x="27" y="103" width="321" height="30"/>
+                                <rect key="frame" x="27" y="76" width="321" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zke-te-5vc">
-                                <rect key="frame" x="27" y="413" width="321" height="222"/>
+                                <rect key="frame" x="27" y="222" width="321" height="433"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -121,21 +130,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zke-te-5vc" firstAttribute="top" secondItem="bBZ-tf-gxw" secondAttribute="bottom" constant="32" id="5xX-TA-uDf"/>
-                            <constraint firstItem="rWG-HY-XPc" firstAttribute="bottom" secondItem="zke-te-5vc" secondAttribute="bottom" constant="32" id="91q-JV-1Rh"/>
-                            <constraint firstItem="rWG-HY-XPc" firstAttribute="trailing" secondItem="bBZ-tf-gxw" secondAttribute="trailing" constant="27" id="Aab-7o-ZqJ"/>
-                            <constraint firstItem="hi8-kN-ARL" firstAttribute="leading" secondItem="rWG-HY-XPc" secondAttribute="leading" constant="27" id="RvE-P4-5qW"/>
-                            <constraint firstItem="zke-te-5vc" firstAttribute="leading" secondItem="rWG-HY-XPc" secondAttribute="leading" constant="27" id="TmE-vL-jqQ"/>
-                            <constraint firstItem="bBZ-tf-gxw" firstAttribute="leading" secondItem="rWG-HY-XPc" secondAttribute="leading" constant="27" id="X2M-bY-RWl"/>
-                            <constraint firstItem="hi8-kN-ARL" firstAttribute="top" secondItem="rWG-HY-XPc" secondAttribute="top" constant="39" id="Zga-B9-eUM"/>
-                            <constraint firstItem="rWG-HY-XPc" firstAttribute="trailing" secondItem="hi8-kN-ARL" secondAttribute="trailing" constant="27" id="pBh-vV-MQ0"/>
-                            <constraint firstItem="rWG-HY-XPc" firstAttribute="trailing" secondItem="zke-te-5vc" secondAttribute="trailing" constant="27" id="tQu-O1-VjC"/>
-                            <constraint firstItem="bBZ-tf-gxw" firstAttribute="top" secondItem="hi8-kN-ARL" secondAttribute="bottom" constant="32" id="wGu-No-qeO"/>
+                            <constraint firstItem="rWG-HY-XPc" firstAttribute="bottom" secondItem="zke-te-5vc" secondAttribute="bottom" constant="12" id="DOq-1H-CNu"/>
+                            <constraint firstItem="hi8-kN-ARL" firstAttribute="top" secondItem="rWG-HY-XPc" secondAttribute="top" constant="12" id="Mwf-6Z-8f5"/>
+                            <constraint firstItem="rWG-HY-XPc" firstAttribute="trailing" secondItem="zke-te-5vc" secondAttribute="trailing" constant="27" id="Oej-41-DTq"/>
+                            <constraint firstItem="bBZ-tf-gxw" firstAttribute="leading" secondItem="rWG-HY-XPc" secondAttribute="leading" constant="27" id="Q7g-U7-bm5"/>
+                            <constraint firstItem="rWG-HY-XPc" firstAttribute="trailing" secondItem="bBZ-tf-gxw" secondAttribute="trailing" constant="27" id="c7C-Dm-B52"/>
+                            <constraint firstItem="zke-te-5vc" firstAttribute="leading" secondItem="rWG-HY-XPc" secondAttribute="leading" constant="27" id="pNh-xn-dOB"/>
+                            <constraint firstItem="zke-te-5vc" firstAttribute="top" secondItem="bBZ-tf-gxw" secondAttribute="bottom" constant="17" id="pwy-Dk-0rr"/>
+                            <constraint firstItem="hi8-kN-ARL" firstAttribute="leading" secondItem="rWG-HY-XPc" secondAttribute="leading" constant="27" id="tn1-tz-zLy"/>
+                            <constraint firstItem="rWG-HY-XPc" firstAttribute="trailing" secondItem="hi8-kN-ARL" secondAttribute="trailing" constant="27" id="vIq-am-lhu"/>
+                            <constraint firstItem="bBZ-tf-gxw" firstAttribute="top" secondItem="hi8-kN-ARL" secondAttribute="bottom" constant="14" id="yBz-tr-951"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rWG-HY-XPc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Choose your victim" id="NTS-ah-e6e">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="adk-Si-t5T"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="oDy-v2-RDH">
+                            <connections>
+                                <action selector="doneButton:" destination="tsA-cH-MRn" id="cEA-EV-0Gj"/>
+                                <segue destination="rTa-hx-RE8" kind="unwind" identifier="doneSegue" unwindAction="unWindSegueWithSegue:" id="yhB-gJ-8Lx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="bBZ-tf-gxw" id="cbR-Qc-e4H"/>
@@ -144,8 +158,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5g-bC-TBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rTa-hx-RE8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1120.8" y="180.35982008995504"/>
+            <point key="canvasLocation" x="1216.8" y="180.35982008995504"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Exh-ig-kC6">

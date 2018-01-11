@@ -22,7 +22,8 @@ class PeopleTableViewCell: UITableViewCell {
             {
                 nameLabel?.text = p.0
                 descriptionLabel?.text = p.1
-                self.backgroundView = UIImageView(image: UIImage(named: "paperBackground"))
+                self.layer.borderWidth = 1.0;
+                self.layer.borderColor = UIColor.black.cgColor;
             }
         }
     }
