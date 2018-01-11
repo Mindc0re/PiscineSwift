@@ -33,9 +33,20 @@ class VictimViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func updateMinDate()
+    {
+        let date = Date();
+        let calendar = Calendar.current;
+        let minComp = calendar.dateComponents([.day, .month, .year, .hour, .minute, .second], from: date);
+        
+        let minDate = calendar.date(from: minComp);
+        datePicker.minimumDate = minDate!;
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "doneSegue"
         {
+            updateMinDate()
             if let _ = nameTextField.text
             {
                 if (nameTextField.text?.isEmpty)! == false
@@ -55,12 +66,7 @@ class VictimViewController: UIViewController {
 
     @IBAction func updateMinimumDate(_ sender: UIDatePicker)
     {
-        let date = Date();
-        let calendar = Calendar.current;
-        let minComp = calendar.dateComponents([.day, .month, .year, .hour, .minute, .second], from: date);
-        
-        let minDate = calendar.date(from: minComp);
-        datePicker.minimumDate = minDate!;
+        updateMinDate()
     }
     
 }
