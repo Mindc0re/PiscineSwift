@@ -21,17 +21,38 @@ class VictimViewController: UIViewController {
         
         descTextView.layer.borderWidth = 1.0;
         descTextView.layer.borderColor = UIColor.black.cgColor;
+        descTextView.layer.cornerRadius = 8;
+        
+        datePicker.layer.cornerRadius = 8;
+        datePicker.backgroundColor = UIColor.white;
+        
+        nameTextField.layer.cornerRadius = 8;
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func doneButton(_ sender: Any)
-    {
-        performSegue(withIdentifier: "doneSegue", sender: "Done");
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "doneSegue"
+        {
+            if let _ = nameTextField.text
+            {
+                if (nameTextField.text?.isEmpty)! == false
+                {
+                    if descTextView.text.isEmpty == true { Data.people.append((nameTextField.text!, datePicker.date, "")); }
+                    else { Data.people.append((nameTextField.text!, datePicker.date, descTextView.text!)); }
+                }
+                
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+                print("Name of the victim : \(nameTextField.text!)");
+                print("Death date : \(formatter.string(from: datePicker.date))");
+                print("Death description : \(descTextView.text!)");
+            }
+        }
     }
-    
+
     @IBAction func updateMinimumDate(_ sender: UIDatePicker)
     {
         let date = Date();

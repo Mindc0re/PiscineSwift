@@ -14,16 +14,23 @@ class PeopleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var person : (String, String)?
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    var person : (String, Date, String)?
     {
         didSet
         {
             if let p = person
             {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+                
                 nameLabel?.text = p.0
-                descriptionLabel?.text = p.1
+                dateLabel?.text = formatter.string(from: p.1)
+                descriptionLabel?.text = p.2
                 self.layer.borderWidth = 1.0;
                 self.layer.borderColor = UIColor.black.cgColor;
+                self.layer.cornerRadius = 8;
             }
         }
     }
