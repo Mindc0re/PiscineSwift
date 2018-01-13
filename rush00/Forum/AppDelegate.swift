@@ -1,12 +1,14 @@
 //
 //  AppDelegate.swift
-//  Day04
+//  Forum
 //
-//  Created by Simon GAUDIN on 1/12/18.
-//  Copyright © 2018 Simon GAUDIN. All rights reserved.
+//  Created by Anil KARAGOZ on 1/13/18.
+//  Copyright © 2018 Anil KARAGOZ. All rights reserved.
 //
 
 import UIKit
+
+let apiController = APIController()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let controller = TopicsViewController()
+        let navigationController = UINavigationController(rootViewController: controller)
+        
+        // navigation Bar styles
+        UIApplication.shared.statusBarStyle = .lightContent
+        UINavigationBar.appearance().barTintColor = UIColor(red: 42/255, green: 46/255, blue: 57/255, alpha: 1)
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        window?.rootViewController = navigationController
+        
         return true
     }
 
