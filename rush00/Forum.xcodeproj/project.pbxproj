@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C5F452E200BD3A000C8294E /* EditMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F452D200BD3A000C8294E /* EditMessageViewController.swift */; };
+		8CAFCD64200BAA060029D434 /* EditTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFCD63200BAA060029D434 /* EditTopicViewController.swift */; };
+		8CBB4DA6200B6D24000102B7 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBB4DA5200B6D24000102B7 /* MessagesViewController.swift */; };
 		8CBCF90E200A55FA00B35588 /* structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCF90D200A55FA00B35588 /* structures.swift */; };
+		8CBCF910200A6D8B00B35588 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCF90F200A6D8B00B35588 /* Requests.swift */; };
 		8E104636200A13B00043FBC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E104635200A13B00043FBC4 /* AppDelegate.swift */; };
 		8E104638200A13B00043FBC4 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E104637200A13B00043FBC4 /* TopicsViewController.swift */; };
 		8E10463B200A13B00043FBC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E104639200A13B00043FBC4 /* Main.storyboard */; };
@@ -19,7 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C5F452D200BD3A000C8294E /* EditMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMessageViewController.swift; sourceTree = "<group>"; };
+		8CAFCD63200BAA060029D434 /* EditTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTopicViewController.swift; sourceTree = "<group>"; };
+		8CBB4DA5200B6D24000102B7 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		8CBCF90D200A55FA00B35588 /* structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structures.swift; sourceTree = "<group>"; };
+		8CBCF90F200A6D8B00B35588 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		8E104632200A13B00043FBC4 /* Forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E104635200A13B00043FBC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E104637200A13B00043FBC4 /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
@@ -63,15 +71,19 @@
 			isa = PBXGroup;
 			children = (
 				8E104635200A13B00043FBC4 /* AppDelegate.swift */,
-				BBED2E07200A568A00709BD9 /* IntraWebViewController.swift */,
+				8CBCF90D200A55FA00B35588 /* structures.swift */,
+				8CBCF90F200A6D8B00B35588 /* Requests.swift */,
 				BBED2E09200A5EF700709BD9 /* APIController.swift */,
-				8E104637200A13B00043FBC4 /* TopicsViewController.swift */,
+				BBED2E07200A568A00709BD9 /* IntraWebViewController.swift */,
 				8E4F649D200A47DB00F61B6F /* LoginViewController.swift */,
+				8E104637200A13B00043FBC4 /* TopicsViewController.swift */,
+				8CBB4DA5200B6D24000102B7 /* MessagesViewController.swift */,
+				8C5F452D200BD3A000C8294E /* EditMessageViewController.swift */,
+				8CAFCD63200BAA060029D434 /* EditTopicViewController.swift */,
 				8E104639200A13B00043FBC4 /* Main.storyboard */,
 				8E10463C200A13B00043FBC4 /* Assets.xcassets */,
 				8E10463E200A13B00043FBC4 /* LaunchScreen.storyboard */,
 				8E104641200A13B00043FBC4 /* Info.plist */,
-				8CBCF90D200A55FA00B35588 /* structures.swift */,
 			);
 			path = Forum;
 			sourceTree = "<group>";
@@ -150,9 +162,13 @@
 			files = (
 				8E4F649E200A47DB00F61B6F /* LoginViewController.swift in Sources */,
 				8E104638200A13B00043FBC4 /* TopicsViewController.swift in Sources */,
+				8CBCF910200A6D8B00B35588 /* Requests.swift in Sources */,
+				8CAFCD64200BAA060029D434 /* EditTopicViewController.swift in Sources */,
+				8C5F452E200BD3A000C8294E /* EditMessageViewController.swift in Sources */,
 				BBED2E08200A568A00709BD9 /* IntraWebViewController.swift in Sources */,
 				8E104636200A13B00043FBC4 /* AppDelegate.swift in Sources */,
 				BBED2E0A200A5EF700709BD9 /* APIController.swift in Sources */,
+				8CBB4DA6200B6D24000102B7 /* MessagesViewController.swift in Sources */,
 				8CBCF90E200A55FA00B35588 /* structures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

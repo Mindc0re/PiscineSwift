@@ -13,6 +13,8 @@ protocol LoginProtocol {
 }
 
 class LoginViewController: UIViewController, LoginProtocol {
+    
+    var delegate: TopicsProtocol?
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(red: 30/255, green: 186/255, blue: 187/100, alpha: 1)
@@ -46,8 +48,8 @@ class LoginViewController: UIViewController, LoginProtocol {
         self.logoImageView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor, constant: -20).isActive = true
         self.logoImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
         self.logoImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+
         self.view.addSubview(loginButton)
-        
         // loginButton constraints
         self.loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         self.loginButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor, constant: 20).isActive = true
@@ -62,6 +64,7 @@ class LoginViewController: UIViewController, LoginProtocol {
     }
     
     func didLogin() {
+        self.delegate?.fetchTopics(completion: {})
         self.dismiss(animated: true, completion: nil)
     }
 }

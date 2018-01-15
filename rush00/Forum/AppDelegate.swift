@@ -8,7 +8,7 @@
 
 import UIKit
 
-let apiController = APIController()
+let httpRequest = HttpRequest()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
