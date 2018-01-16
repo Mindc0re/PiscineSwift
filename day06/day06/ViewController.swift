@@ -31,8 +31,6 @@ class ViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(gesture:)))
         self.viewShapes.addGestureRecognizer(tapGesture)
         
-//        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(gesture:)))
-//        self.viewShapes.addGestureRecognizer(panGesture)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,20 +46,8 @@ class ViewController: UIViewController {
         collisionBehavior.addItem(newShape)
         elasticityBehavior.addItem(newShape)
     }
-//
-//    @objc func handlePanGesture(gesture: UIPanGestureRecognizer)
-//    {
-//        if gesture.state == .changed
-//        {
-//            for v in self.viewShapes.subviews
-//            {
-//                if v.point(inside: gesture.location(in: self.viewShapes), with: nil)
-//                {
-//                    let attachmentBehavior = UIAttachmentBehavior(item: v, attachedToAnchor: gesture.location(in: self.viewShapes))
-//                    dynamicAnimator?.addBehavior(attachmentBehavior)
-//                }
-//            }
-//        }
-//    }
+
+
+    
 }
 
