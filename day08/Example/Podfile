@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'sgaudin2018_Example' do
+  pod 'sgaudin2018', :path => '../'
+
+  target 'sgaudin2018_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
